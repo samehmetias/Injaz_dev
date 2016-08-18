@@ -1,0 +1,6 @@
+<h1>Editing Employee</h1>
+
+<%= render 'form' %>
+
+<%= link_to "Show", {:controller => "employees", :action => "show", :id => @employee.id }, :method => "get" %>
+<%= link_to 'Back', employees_path %>

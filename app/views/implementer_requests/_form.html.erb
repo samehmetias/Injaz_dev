@@ -1,0 +1,45 @@
+<%= form_for(@implementer_request) do |f| %>
+  <% if @implementer_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@implementer_request.errors.count, "error") %> prohibited this implementer_request from being saved:</h2>
+
+      <ul>
+      <% @implementer_request.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :classroom %><br>
+    <%= f.text_field :classroom %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.datetime_select :start_date %>
+  </div>  
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.number_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :School_id %><br>
+    <%= f.text_field :School_id %>
+  </div>
+  <div class="field">
+    <%= f.label :User_id %><br>
+    <%= f.text_field :User_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Program_id %><br>
+    <%= f.text_field :Program_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
